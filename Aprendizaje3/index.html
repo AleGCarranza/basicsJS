@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <title>Funciones</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container__contenido">
+            <div class="container__informaciones">
+                <div class="container__texto">
+                    <h1>Ejercicios de practica ACTIVIDAD 3</h1>
+                </div>
+                <div>
+                    <p>Ingrese su peso en kg y talla en m</p>
+                    <input id="peso" placeholder="peso" type="number" min="1" max="10" class="container__input">
+                    <input id="altura" placeholder="altura" type="number" min="1" max="10" class="container__input">
+                    <button onclick="calcularIMC()">Calcular IMC</button>
+                    <p id="imc"></p>
+                    <p id="estadoSalud"></p>
+                </div>
+
+                <div>
+                    <input id="numeroUsuario" type="text" min="1" max="10" class="container__input">
+                    <button onclick="crearDoble()">3. Número doble</button>
+                </div>
+<div>
+                    <input id="valor1" type="number" min="1" max="10" class="container__input" placeholder="Valor 1">
+                    <input id="valor2" type="number" min="1" max="10" class="container__input" placeholder ="Valor 2">
+                    <input id="valor3" type="number" min="1" max="10" class="container__input" placeholder ="Valor 3">
+                    
+                    
+                    <button onclick="promedio()">4.  Promedio </button>
+                </div>
+                <div>
+                    <input id="numero1" placeholder="número 1" type="number" min="1" max="10" class="container__input">
+                    <input id="numero2" placeholer = "número 2"type="number" min="1" max="10" class="container__input">
+                    <button onclick="numeroMayor()">5. Número Mayor</button>
+                </div>
+                <div>
+                    <input id="numero" placeholder="número" type="number" min="1" max="10" class="container__input">
+                    
+                    <button onclick="multiplicar()">6.Multiplicar por si mismo</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <script src="app.js" defer></script>
+</body>
+
+</html>
