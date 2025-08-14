@@ -1,5 +1,7 @@
 let numeroSecreto;
 let intentos;
+let listaNumeros = [];
+let numeroGeneradoMaximo = 10;  
 
 function asignarTexto(elemento, texto) {
     let elementoHTML = document.querySelector(elemento);
@@ -24,7 +26,24 @@ function intentoDeUsuario() {
 }
 
 function generarNumeroSecreto() {
-    return Math.floor(Math.random() * 10) + 1;
+    let numeroGenerado = Math.floor(Math.random() * numeroMaximo) +1 ;
+
+    console.log(numeroGenerado);
+    console.log(listaNumeros);
+
+    if ( listaNumeros.lentgh == numeroMaximo){
+        asignarTexto("p", "Todos los números posibles han sido generados. Reinicia el juego.");
+        document.getElementById("reiniciar").removeAttribute("disabled");
+        return;
+    }else{
+ if (listaNumeros.includes(numeroGenerado)){
+        return generarNumeroSecreto();
+    } else {
+        listaNumeros.push(numeroGenerado);
+        return numeroGenerado;  
+    }
+    }
+   
 }
 
 function limpiarInput() {
@@ -34,7 +53,7 @@ function limpiarInput() {
 
 function condicionesIniciales() {
     asignarTexto("h1", "¡Bienvenido al juego de adivinanza!");
-    asignarTexto("p", "Adivina el número secreto entre 1 y 10. Tienes 3 intentos.");
+    asignarTexto("p", `Adivina el número secreto entre 1 y ${numeroMaximo}. Tienes 3 intentos.`);
     numeroSecreto = generarNumeroSecreto();
     intentos = 1;
     document.getElementById("reiniciar").setAttribute("disabled", "true");
